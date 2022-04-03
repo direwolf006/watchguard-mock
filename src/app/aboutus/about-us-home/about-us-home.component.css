@@ -1,0 +1,37 @@
+.page-heading{
+    background-color: rgb(177, 34, 34);
+    text-align: left;
+    color: white;
+    padding-left: 8% ;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner_image{
+    width: 100%;
+}
+.aboutus-content{
+    padding: 1% 7%;
+    margin-top: -1px;
+    background-color: rgba(234, 234, 234, 0.77);
+}
+.aboutus-title{
+    font-size: 30px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.aboutus-description{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    line-height: 26px;
+}
+
+.banner-button{
+    background-color: rgb(182, 25, 25);
+    color: white;
+}
+

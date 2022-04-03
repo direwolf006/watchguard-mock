@@ -1,0 +1,74 @@
+<div class="banner-card">
+    <div class="banner-content">
+        <h5 class="banner-text">
+            Protect Remote Workers
+        </h5>
+        <button mat-button class="banner-button"> 
+            <mat-icon >search</mat-icon>
+            Explore</button>
+    </div>
+    <img mat-card-image src="/assets/images/banners/resources-for-remote-worker-security.jpg" class="banner-image"
+        alt="Photo of a Shiba Inu" />
+</div>
+
+<div class="why-wgrd">
+    <h1 class="why-cards-title">
+        Why watchguard ?
+    </h1>
+    <div class="why-cards-container">
+        <div fxLayout="row wrap" fxLayoutGap="2%" fxLayoutAlign="space-evenly center" >
+            <div class="why-card-container" 
+                fxFlex.xs="100%" fxFlex.sm="80%" fxFlex.lg="20%" *ngFor="let card of whyWatchGuardCards; let i=index" (click)="toggleCard(i)" >
+                    <div class="card-inner">
+                        <div class="why-card-front" >
+                            <p class="why-card-title">
+                                    {{card.title}}
+                            </p>
+                            <img mat-card-image src={{card.image}} class="why-card-image"
+                            alt="features of watchguard"/>
+                        </div>
+                        <div class="why-card-back">
+                            <p class="why-card-content">
+                                 {{card.content}}
+                            </p>
+                        </div> 
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="quote">
+    <p >
+        “It’s about having the outright capability, flexibility, and scalability WatchGuard provides. Whatever problem you’re trying to solve, whatever challenge you’re up against, you’ll do it with WatchGuard.”
+    </p>
+    <p style="text-align: center;">
+        - Andrew Evers, Head of IT, Reconomy
+    </p>
+</div>
+<div>
+    <h1 class="features-cards-title">
+        Key Features
+    </h1>
+    <div class="grid-list-features">
+        <mat-grid-list [cols]="noOfColumns-1" rowHeight="300px" >
+    
+            <mat-grid-tile class="grid-tile-features" *ngFor="let card of keyFeaturesCards" >
+                <div class="features-container">
+                    <div>
+                        <img mat-card-image src={{card.image}} class="features-card-image"
+                        alt={{card.alt}}/>
+                    </div>
+                    <div class="features-card-title">
+                        {{card.title}}
+                    </div>
+                </div>
+            </mat-grid-tile>
+    
+          </mat-grid-list>
+    
+    </div>
+</div>
+
+

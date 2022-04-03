@@ -1,0 +1,44 @@
+<mat-toolbar >
+  <div style="justify-content: space-between;display: flex;width:100%;">
+    <img src="/assets/images/watchguard-logo.svg" class="toolbar-logo" routerLink="/" routerLinkActive="active"/>
+    <div *ngIf="isMedium||isLarge||isXLarge">
+      
+      <a mat-button routerLink="/" routerLinkActive="active" class="menu-item">
+        <mat-icon>home</mat-icon>
+        Home</a>
+      <a mat-button routerLink="/products" routerLinkActive="active" class="menu-item">
+        <mat-icon>shop_2</mat-icon>
+        Products & Services</a>
+      <a mat-button routerLink="/solutions" routerLinkActive="active" class="menu-item">
+        <mat-icon>analytics</mat-icon>
+        Solutions</a>
+      <a mat-button routerLink="/about-us" routerLinkActive="active" class="menu-item">
+        <mat-icon>contact_mail</mat-icon>
+        About Us</a>
+    </div>
+  </div>
+      <button mat-icon-button *ngIf="isSmall||isXSmall" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" xPosition="before">
+        <button mat-menu-item routerLink="/" routerLinkActive="active">
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </button>
+        <button mat-menu-item routerLink="/products" routerLinkActive="active">
+          <mat-icon>shop_2</mat-icon>
+          <span>Products & Services</span>
+        </button>
+        <button mat-menu-item routerLink="/solutions" routerLinkActive="active">
+          <mat-icon>check_circle</mat-icon>
+          <span>Solutions</span>
+        </button>
+        <button mat-menu-item routerLink="/about-us" routerLinkActive="active">
+          <mat-icon>contact_mail</mat-icon>
+          <span>About Us</span>
+        </button>
+      </mat-menu>
+</mat-toolbar>
+<div class="ui segment">
+  <router-outlet></router-outlet>
+</div>
